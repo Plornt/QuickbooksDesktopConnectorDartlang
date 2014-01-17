@@ -1,23 +1,8 @@
 library QuickbooksConnector;
 
-import 'dart:io';
 import 'dart:async';
 import 'dart:isolate';
 import 'dart-ext:QBXMLRP2_DART';
-
-void main () {
-  QuickbooksConnector qbC = new QuickbooksConnector();
-  qbC.openConnection("Test App", "A test application").then((bool isConnected) { 
-    if (isConnected) {
-      print("Connected");
-      qbC.beginSession("", QBFileMode.doNotCare).then((String ticket) { 
-        qbC.getCurrentCompanyFileName(ticket).then((name) { 
-          print(name);
-        });
-      });
-    }
-  });
-}
 
 class QBFileMode {
   static QBFileMode doNotCare = new QBFileMode._create(2);
