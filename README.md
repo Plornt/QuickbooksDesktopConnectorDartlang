@@ -9,11 +9,23 @@ It essentially wraps the methods in the QBXMLRP2 Interop DLL.
 I suggest for exact usage you consult the QBXMLRP2 documentation as it is the same parameters and responses.
 
 
+Instal
+======
+
+Download repository as zip or clone it, move the package folder to somewhere that makes sense.
+
+Add the following to your pubspec
+
+```yaml
+    QBXMLRP2_DART: 
+        path: '<PATH_TO_PACKAGE_DIRECTORY>\QBXMLRP2_DART'
+```
+
 Quick Example:
 ==============
 
 ```dart
-import 'QBXMLRP2_DART/QBXMLRP2_DART.dart';
+import 'package:QBXMLRP2_DART/QBXMLRP2_DART.dart';
 
 void main () {
   QuickbooksConnector qbc = new QuickbooksConnector();
