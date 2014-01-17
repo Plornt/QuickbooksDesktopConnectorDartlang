@@ -1,0 +1,6 @@
+name: QBXMLRP2_DART
+version: 0.0.1
+author: Thomas Caserta <tomcaserta@gmail.com>
+description: Quickbooks to Dart QBXML Connector 
+environment:
+  sdk: any
