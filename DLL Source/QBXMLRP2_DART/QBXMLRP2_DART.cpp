@@ -116,7 +116,6 @@ ref class RequestPointer {
 	static Interop::QBXMLRP2::IRequestProcessor5 ^rqPtr = gcnew Interop::QBXMLRP2::RequestProcessor3; 
 };
 void QBXMLMessageHandler (Dart_Port dest_port_id, Dart_CObject* message) {
-	// Not sure if this will create a new object literally every time this method is called, but meh.
 	Dart_Port replyPortID = ILLEGAL_PORT;
 	if (message->type == Dart_CObject_kArray && message->value.as_array.length == 3) {
 		Dart_CObject* replyPort = message->value.as_array.values[0];
