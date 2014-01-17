@@ -1,0 +1,317 @@
+ImageRuntimeVersion: v1.1.4322
+Assembly Interop.QBXMLRP2, Version=13.0.0.23, Culture=neutral, PublicKeyToken=31d8aec643e18259: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Interop.QBXMLRP2.RequestProcessor3Class: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    Interop.QBXMLRP2.IRequestProcessor5
+    Interop.QBXMLRP2.IRequestProcessor4
+    Interop.QBXMLRP2.IRequestProcessor3
+    Interop.QBXMLRP2.RequestProcessor3
+  Properties:
+    Int16 MajorVersion 'get ' : 
+    Int16 MinorVersion 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPReleaseLevel ReleaseLevel 'get ' : 
+    Int16 ReleaseNumber 'get ' : 
+    System.String[] QBXMLVersionsForSession [System.String] 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPConnectionType ConnectionType 'get ' : 
+    System.String[] QBXMLVersionsForSubscription 'get ' : 
+    Interop.QBXMLRP2.IAuthPreferences AuthPreferences 'get ' : 
+    Int16 IRequestProcessor4_MajorVersion 'get ' : 
+    Int16 IRequestProcessor4_MinorVersion 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPReleaseLevel IRequestProcessor4_ReleaseLevel 'get ' : 
+    Int16 IRequestProcessor4_ReleaseNumber 'get ' : 
+    System.String[] IRequestProcessor4_QBXMLVersionsForSession [System.String] 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPConnectionType IRequestProcessor4_ConnectionType 'get ' : 
+    System.String[] IRequestProcessor4_QBXMLVersionsForSubscription 'get ' : 
+    Interop.QBXMLRP2.IAuthPreferences IRequestProcessor4_AuthPreferences 'get ' : 
+    Int16 IRequestProcessor3_MajorVersion 'get ' : 
+    Int16 IRequestProcessor3_MinorVersion 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPReleaseLevel IRequestProcessor3_ReleaseLevel 'get ' : 
+    Int16 IRequestProcessor3_ReleaseNumber 'get ' : 
+    System.String[] IRequestProcessor3_QBXMLVersionsForSession [System.String] 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPConnectionType IRequestProcessor3_ConnectionType 'get ' : 
+    System.String[] IRequestProcessor3_QBXMLVersionsForSubscription 'get ' : 
+  Methods:
+    ProcessRequest(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    OpenConnection(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CloseConnection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginSession(String(In, HasFieldMarshal), QBFileMode(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetCurrentCompanyFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_MajorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_MinorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ReleaseLevel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ReleaseNumber(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_QBXMLVersionsForSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ConnectionType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ProcessSubscription(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_QBXMLVersionsForSubscription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    OpenConnection2(String(In, HasFieldMarshal), String(In, HasFieldMarshal), QBXMLRPConnectionType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_AuthPreferences(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetQBLastError(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor4_ProcessRequest(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor4_OpenConnection(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor4_CloseConnection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor4_BeginSession(String(In, HasFieldMarshal), QBFileMode(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor4_EndSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor4_GetCurrentCompanyFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor4_get_MajorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor4_get_MinorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor4_get_ReleaseLevel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor4_get_ReleaseNumber(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor4_get_QBXMLVersionsForSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor4_get_ConnectionType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor4_ProcessSubscription(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor4_get_QBXMLVersionsForSubscription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor4_OpenConnection2(String(In, HasFieldMarshal), String(In, HasFieldMarshal), QBXMLRPConnectionType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor4_get_AuthPreferences(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor3_ProcessRequest(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor3_OpenConnection(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor3_CloseConnection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor3_BeginSession(String(In, HasFieldMarshal), QBFileMode(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor3_EndSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor3_GetCurrentCompanyFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor3_get_MajorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor3_get_MinorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor3_get_ReleaseLevel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor3_get_ReleaseNumber(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor3_get_QBXMLVersionsForSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor3_get_ConnectionType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor3_ProcessSubscription(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor3_get_QBXMLVersionsForSubscription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface Interop.QBXMLRP2.RequestProcessor3: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    Interop.QBXMLRP2.IRequestProcessor5
+    Interop.QBXMLRP2.IRequestProcessor4
+    Interop.QBXMLRP2.IRequestProcessor3
+Interface Interop.QBXMLRP2.IRequestProcessor5: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    Interop.QBXMLRP2.IRequestProcessor4
+    Interop.QBXMLRP2.IRequestProcessor3
+  Properties:
+    Int16 MajorVersion 'get ' : 
+    Int16 MinorVersion 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPReleaseLevel ReleaseLevel 'get ' : 
+    Int16 ReleaseNumber 'get ' : 
+    System.String[] QBXMLVersionsForSession [System.String] 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPConnectionType ConnectionType 'get ' : 
+    System.String[] QBXMLVersionsForSubscription 'get ' : 
+    Interop.QBXMLRP2.IAuthPreferences AuthPreferences 'get ' : 
+  Methods:
+    ProcessRequest(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OpenConnection(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CloseConnection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BeginSession(String(In, HasFieldMarshal), QBFileMode(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    EndSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCurrentCompanyFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_MajorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MinorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReleaseLevel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReleaseNumber(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_QBXMLVersionsForSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ConnectionType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    ProcessSubscription(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_QBXMLVersionsForSubscription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    OpenConnection2(String(In, HasFieldMarshal), String(In, HasFieldMarshal), QBXMLRPConnectionType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_AuthPreferences(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetQBLastError(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface Interop.QBXMLRP2.IRequestProcessor4: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    Interop.QBXMLRP2.IRequestProcessor3
+  Properties:
+    Int16 MajorVersion 'get ' : 
+    Int16 MinorVersion 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPReleaseLevel ReleaseLevel 'get ' : 
+    Int16 ReleaseNumber 'get ' : 
+    System.String[] QBXMLVersionsForSession [System.String] 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPConnectionType ConnectionType 'get ' : 
+    System.String[] QBXMLVersionsForSubscription 'get ' : 
+    Interop.QBXMLRP2.IAuthPreferences AuthPreferences 'get ' : 
+  Methods:
+    ProcessRequest(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OpenConnection(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CloseConnection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BeginSession(String(In, HasFieldMarshal), QBFileMode(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    EndSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCurrentCompanyFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_MajorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MinorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReleaseLevel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReleaseNumber(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_QBXMLVersionsForSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ConnectionType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    ProcessSubscription(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_QBXMLVersionsForSubscription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    OpenConnection2(String(In, HasFieldMarshal), String(In, HasFieldMarshal), QBXMLRPConnectionType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_AuthPreferences(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Interop.QBXMLRP2.IRequestProcessor3: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Int16 MajorVersion 'get ' : 
+    Int16 MinorVersion 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPReleaseLevel ReleaseLevel 'get ' : 
+    Int16 ReleaseNumber 'get ' : 
+    System.String[] QBXMLVersionsForSession [System.String] 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPConnectionType ConnectionType 'get ' : 
+    System.String[] QBXMLVersionsForSubscription 'get ' : 
+  Methods:
+    ProcessRequest(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OpenConnection(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CloseConnection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BeginSession(String(In, HasFieldMarshal), QBFileMode(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    EndSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCurrentCompanyFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_MajorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MinorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReleaseLevel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReleaseNumber(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_QBXMLVersionsForSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ConnectionType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    ProcessSubscription(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_QBXMLVersionsForSubscription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Struct Interop.QBXMLRP2.QBFileMode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Interop.QBXMLRP2.QBFileMode qbFileOpenSingleUser = 0 : Public, Static, Literal, HasDefault
+    Interop.QBXMLRP2.QBFileMode qbFileOpenMultiUser = 1 : Public, Static, Literal, HasDefault
+    Interop.QBXMLRP2.QBFileMode qbFileOpenDoNotCare = 2 : Public, Static, Literal, HasDefault
+Struct Interop.QBXMLRP2.QBXMLRPReleaseLevel: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Interop.QBXMLRP2.QBXMLRPReleaseLevel preAlpha = 0 : Public, Static, Literal, HasDefault
+    Interop.QBXMLRP2.QBXMLRPReleaseLevel alpha = 1 : Public, Static, Literal, HasDefault
+    Interop.QBXMLRP2.QBXMLRPReleaseLevel beta = 2 : Public, Static, Literal, HasDefault
+    Interop.QBXMLRP2.QBXMLRPReleaseLevel release = 3 : Public, Static, Literal, HasDefault
+Struct Interop.QBXMLRP2.QBXMLRPConnectionType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Interop.QBXMLRP2.QBXMLRPConnectionType unknown = 0 : Public, Static, Literal, HasDefault
+    Interop.QBXMLRP2.QBXMLRPConnectionType localQBD = 1 : Public, Static, Literal, HasDefault
+    Interop.QBXMLRP2.QBXMLRPConnectionType remoteQBD = 2 : Public, Static, Literal, HasDefault
+    Interop.QBXMLRP2.QBXMLRPConnectionType localQBDLaunchUI = 3 : Public, Static, Literal, HasDefault
+    Interop.QBXMLRP2.QBXMLRPConnectionType remoteQBOE = 4 : Public, Static, Literal, HasDefault
+Interface Interop.QBXMLRP2.IAuthPreferences: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    WasAuthPreferencesObeyed(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetIsReadOnly(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PutIsReadOnly(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetUnattendedModePref(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PutUnattendedModePref(QBXMLRPUnattendedModePrefType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetPersonalDataPref(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PutPersonalDataPref(QBXMLRPPersonalDataPrefType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Struct Interop.QBXMLRP2.QBXMLRPUnattendedModePrefType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Interop.QBXMLRP2.QBXMLRPUnattendedModePrefType umpRequired = 1 : Public, Static, Literal, HasDefault
+    Interop.QBXMLRP2.QBXMLRPUnattendedModePrefType umpOptional = 2 : Public, Static, Literal, HasDefault
+Struct Interop.QBXMLRP2.QBXMLRPPersonalDataPrefType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Interop.QBXMLRP2.QBXMLRPPersonalDataPrefType pdpRequired = 1 : Public, Static, Literal, HasDefault
+    Interop.QBXMLRP2.QBXMLRPPersonalDataPrefType pdpOptional = 2 : Public, Static, Literal, HasDefault
+    Interop.QBXMLRP2.QBXMLRPPersonalDataPrefType pdpNotNeeded = 3 : Public, Static, Literal, HasDefault
+Class Interop.QBXMLRP2.RequestProcessor2Class: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    Interop.QBXMLRP2.IRequestProcessor4
+    Interop.QBXMLRP2.IRequestProcessor3
+    Interop.QBXMLRP2.RequestProcessor2
+  Properties:
+    Int16 MajorVersion 'get ' : 
+    Int16 MinorVersion 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPReleaseLevel ReleaseLevel 'get ' : 
+    Int16 ReleaseNumber 'get ' : 
+    System.String[] QBXMLVersionsForSession [System.String] 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPConnectionType ConnectionType 'get ' : 
+    System.String[] QBXMLVersionsForSubscription 'get ' : 
+    Interop.QBXMLRP2.IAuthPreferences AuthPreferences 'get ' : 
+    Int16 IRequestProcessor3_MajorVersion 'get ' : 
+    Int16 IRequestProcessor3_MinorVersion 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPReleaseLevel IRequestProcessor3_ReleaseLevel 'get ' : 
+    Int16 IRequestProcessor3_ReleaseNumber 'get ' : 
+    System.String[] IRequestProcessor3_QBXMLVersionsForSession [System.String] 'get ' : 
+    Interop.QBXMLRP2.QBXMLRPConnectionType IRequestProcessor3_ConnectionType 'get ' : 
+    System.String[] IRequestProcessor3_QBXMLVersionsForSubscription 'get ' : 
+  Methods:
+    ProcessRequest(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    OpenConnection(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CloseConnection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginSession(String(In, HasFieldMarshal), QBFileMode(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetCurrentCompanyFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_MajorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_MinorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ReleaseLevel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ReleaseNumber(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_QBXMLVersionsForSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ConnectionType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ProcessSubscription(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_QBXMLVersionsForSubscription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    OpenConnection2(String(In, HasFieldMarshal), String(In, HasFieldMarshal), QBXMLRPConnectionType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_AuthPreferences(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor3_ProcessRequest(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor3_OpenConnection(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor3_CloseConnection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor3_BeginSession(String(In, HasFieldMarshal), QBFileMode(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor3_EndSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor3_GetCurrentCompanyFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor3_get_MajorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor3_get_MinorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor3_get_ReleaseLevel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor3_get_ReleaseNumber(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor3_get_QBXMLVersionsForSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor3_get_ConnectionType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor3_ProcessSubscription(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor3_get_QBXMLVersionsForSubscription(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface Interop.QBXMLRP2.RequestProcessor2: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    Interop.QBXMLRP2.IRequestProcessor4
+    Interop.QBXMLRP2.IRequestProcessor3
+Class Interop.QBXMLRP2.AuthPreferencesClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    Interop.QBXMLRP2.IAuthPreferences2
+    Interop.QBXMLRP2.IAuthPreferences
+    Interop.QBXMLRP2.AuthPreferences
+  Methods:
+    WasAuthPreferencesObeyed(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetIsReadOnly(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    PutIsReadOnly(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetUnattendedModePref(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    PutUnattendedModePref(QBXMLRPUnattendedModePrefType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetPersonalDataPref(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    PutPersonalDataPref(QBXMLRPPersonalDataPrefType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    PutAuthFlags(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IAuthPreferences_WasAuthPreferencesObeyed(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IAuthPreferences_GetIsReadOnly(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IAuthPreferences_PutIsReadOnly(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IAuthPreferences_GetUnattendedModePref(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IAuthPreferences_PutUnattendedModePref(QBXMLRPUnattendedModePrefType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IAuthPreferences_GetPersonalDataPref(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IAuthPreferences_PutPersonalDataPref(QBXMLRPPersonalDataPrefType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface Interop.QBXMLRP2.AuthPreferences: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    Interop.QBXMLRP2.IAuthPreferences2
+    Interop.QBXMLRP2.IAuthPreferences
+Interface Interop.QBXMLRP2.IAuthPreferences2: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    Interop.QBXMLRP2.IAuthPreferences
+  Methods:
+    WasAuthPreferencesObeyed(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetIsReadOnly(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PutIsReadOnly(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetUnattendedModePref(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PutUnattendedModePref(QBXMLRPUnattendedModePrefType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetPersonalDataPref(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PutPersonalDataPref(QBXMLRPPersonalDataPrefType(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PutAuthFlags(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract

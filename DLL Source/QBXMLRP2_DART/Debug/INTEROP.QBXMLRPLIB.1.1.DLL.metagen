@@ -1,0 +1,102 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly Interop.QBXMLRPLib.1.1, Version=1.1.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class QBXMLRPLib.RequestProcessorClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    QBXMLRPLib.IRequestProcessor2
+    QBXMLRPLib.RequestProcessor
+    QBXMLRPLib.IRequestProcessor
+  Properties:
+    Int16 MajorVersion 'get ' : 
+    Int16 MinorVersion 'get ' : 
+    QBXMLRPLib.QBXMLRPReleaseLevel ReleaseLevel 'get ' : 
+    Int16 ReleaseNumber 'get ' : 
+    System.Array QBXMLVersionsForSession [System.String] 'get ' : 
+    Int16 IRequestProcessor_MajorVersion 'get ' : 
+    Int16 IRequestProcessor_MinorVersion 'get ' : 
+    QBXMLRPLib.QBXMLRPReleaseLevel IRequestProcessor_ReleaseLevel 'get ' : 
+    Int16 IRequestProcessor_ReleaseNumber 'get ' : 
+    System.Array IRequestProcessor_QBXMLVersionsForSession [System.String] 'get ' : 
+  Methods:
+    ProcessRequest(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    OpenConnection(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CloseConnection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginSession(String(In, HasFieldMarshal), QBFileMode(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetCurrentCompanyFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_MajorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_MinorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ReleaseLevel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ReleaseNumber(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_QBXMLVersionsForSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor_ProcessRequest(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor_OpenConnection(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor_CloseConnection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor_BeginSession(String(In, HasFieldMarshal), QBFileMode(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor_EndSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor_GetCurrentCompanyFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IRequestProcessor_get_MajorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor_get_MinorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor_get_ReleaseLevel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor_get_ReleaseNumber(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IRequestProcessor_get_QBXMLVersionsForSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface QBXMLRPLib.RequestProcessor: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    QBXMLRPLib.IRequestProcessor2
+Interface QBXMLRPLib.IRequestProcessor2: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Int16 MajorVersion 'get ' : 
+    Int16 MinorVersion 'get ' : 
+    QBXMLRPLib.QBXMLRPReleaseLevel ReleaseLevel 'get ' : 
+    Int16 ReleaseNumber 'get ' : 
+    System.Array QBXMLVersionsForSession [System.String] 'get ' : 
+  Methods:
+    ProcessRequest(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OpenConnection(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CloseConnection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BeginSession(String(In, HasFieldMarshal), QBFileMode(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    EndSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCurrentCompanyFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_MajorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MinorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReleaseLevel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReleaseNumber(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_QBXMLVersionsForSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Struct QBXMLRPLib.QBFileMode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    QBXMLRPLib.QBFileMode qbFileOpenSingleUser = 0 : Public, Static, Literal, HasDefault
+    QBXMLRPLib.QBFileMode qbFileOpenMultiUser = 1 : Public, Static, Literal, HasDefault
+    QBXMLRPLib.QBFileMode qbFileOpenDoNotCare = 2 : Public, Static, Literal, HasDefault
+Struct QBXMLRPLib.QBXMLRPReleaseLevel: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    QBXMLRPLib.QBXMLRPReleaseLevel preAlpha = 0 : Public, Static, Literal, HasDefault
+    QBXMLRPLib.QBXMLRPReleaseLevel alpha = 1 : Public, Static, Literal, HasDefault
+    QBXMLRPLib.QBXMLRPReleaseLevel beta = 2 : Public, Static, Literal, HasDefault
+    QBXMLRPLib.QBXMLRPReleaseLevel release = 3 : Public, Static, Literal, HasDefault
+Interface QBXMLRPLib.IRequestProcessor: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Int16 MajorVersion 'get ' : 
+    Int16 MinorVersion 'get ' : 
+    QBXMLRPLib.QBXMLRPReleaseLevel ReleaseLevel 'get ' : 
+    Int16 ReleaseNumber 'get ' : 
+    System.Array QBXMLVersionsForSession [System.String] 'get ' : 
+  Methods:
+    ProcessRequest(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OpenConnection(String(In, HasFieldMarshal), String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CloseConnection(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BeginSession(String(In, HasFieldMarshal), QBFileMode(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    EndSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCurrentCompanyFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_MajorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MinorVersion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReleaseLevel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReleaseNumber(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_QBXMLVersionsForSession(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
