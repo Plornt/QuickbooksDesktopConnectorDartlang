@@ -4,8 +4,6 @@
 #include <iostream>
 #include <fstream>
 
-
-
 using namespace System;
 using namespace std;
 using namespace System::Runtime::InteropServices;
@@ -29,6 +27,7 @@ Dart_Handle HandleError(Dart_Handle handle) {
 	if (Dart_IsError(handle)) Dart_PropagateError(handle);
 	return handle;
 }
+
 
 enum MethodNames {
 	error,
@@ -111,106 +110,161 @@ void SendString (Dart_Port port, String ^response) {
 
 }
 
+void SendHandle (Dart_Port port, Dart_Handle handle) { 
+	Dart_Post(port, handle);
+}
+Dart_CObject* New(Dart_CObject_Type type, int additional_bytes) {
+  Dart_CObject* cobject = reinterpret_cast<Dart_CObject*>(
+      Dart_ScopeAllocate(sizeof(Dart_CObject) + additional_bytes));
+  cobject->type = type;
+  return cobject;
+}
+
+
 ref class RequestPointer {
    public:
 	static Interop::QBXMLRP2::IRequestProcessor5 ^rqPtr = gcnew Interop::QBXMLRP2::RequestProcessor3; 
 };
 void QBXMLMessageHandler (Dart_Port dest_port_id, Dart_CObject* message) {
 	Dart_Port replyPortID = ILLEGAL_PORT;
-	if (message->type == Dart_CObject_kArray && message->value.as_array.length == 3) {
-		Dart_CObject* replyPort = message->value.as_array.values[0];
-		Dart_CObject* method = message->value.as_array.values[1];
-		Dart_CObject* params = message->value.as_array.values[2];
-		if (replyPort->type == Dart_CObject_kSendPort && method->type == Dart_CObject_kString && params->type == Dart_CObject_kArray) {
-			replyPortID = replyPort->value.as_send_port;
-			String ^methodStr = gcnew String(method->value.as_string);
-			switch (getMethodFromString(methodStr)) {
-				case closeConnection:{
-					RequestPointer::rqPtr->CloseConnection();
-					SendBool(replyPortID, true);
-					return;
-									 }
-					break;
-				case openConnection:{
-					if (params->value.as_array.length == 2) {
-						Dart_CObject* appID = params->value.as_array.values[0];
-						Dart_CObject* appName = params->value.as_array.values[0];
-						if (appID->type == Dart_CObject_kString && appName->type == Dart_CObject_kString) {
-							RequestPointer::rqPtr->OpenConnection(gcnew String(appID->value.as_string), gcnew String(appName->value.as_string));
+
+		if (message->type == Dart_CObject_kArray && message->value.as_array.length == 3) {
+			Dart_CObject* replyPort = message->value.as_array.values[0];
+			Dart_CObject* method = message->value.as_array.values[1];
+			Dart_CObject* params = message->value.as_array.values[2];
+			if (replyPort->type == Dart_CObject_kSendPort && method->type == Dart_CObject_kString && params->type == Dart_CObject_kArray) {
+
+				replyPortID = replyPort->value.as_send_port;
+				try {
+					String ^methodStr = gcnew String(method->value.as_string);
+					switch (getMethodFromString(methodStr)) {
+						case closeConnection:{
+							RequestPointer::rqPtr->CloseConnection();
 							SendBool(replyPortID, true);
 							return;
-						}
-					}
-									}
-					break;
-				case beginSession:{
-					if (params->value.as_array.length == 2) {
-						Dart_CObject* fileName = params->value.as_array.values[0];
-						Dart_CObject* fileMode = params->value.as_array.values[1];
-						if (fileName->type == Dart_CObject_kString && fileMode->type == Dart_CObject_kInt32) {
-						    QBFileMode qbFM = (QBFileMode) fileMode->value.as_int32;
-							String ^ticket = RequestPointer::rqPtr->BeginSession(gcnew String(fileName->value.as_string), qbFM);
-							SendString(replyPortID, ticket);
-							return;	
-						}
-					}
-								  }
-					break;
-				case endSession:{
-					if (params->value.as_array.length == 1) {
-						Dart_CObject* ticket = params->value.as_array.values[0];
-						if (ticket->type == Dart_CObject_kString) {
-							RequestPointer::rqPtr->EndSession(gcnew String(ticket->value.as_string));
-							SendBool(replyPortID, true);
-							return;	
-						}
-					}
+											 }
+							break;
+						case openConnection:{
+							if (params->value.as_array.length == 2) {
+								Dart_CObject* appID = params->value.as_array.values[0];
+								Dart_CObject* appName = params->value.as_array.values[0];
+								if (appID->type == Dart_CObject_kString && appName->type == Dart_CObject_kString) {
+									RequestPointer::rqPtr->OpenConnection(gcnew String(appID->value.as_string), gcnew String(appName->value.as_string));
+									SendBool(replyPortID, true);
+									return;
 								}
-					break;
-				case processRequest:{
-					if (params->value.as_array.length == 2) {
-						Dart_CObject* ticket = params->value.as_array.values[0];
-						Dart_CObject* xml = params->value.as_array.values[1];
-						if (ticket->type == Dart_CObject_kString && xml->type == Dart_CObject_kString) {
-							String ^responseXML = RequestPointer::rqPtr->ProcessRequest(gcnew String (ticket->value.as_string), gcnew String(xml->value.as_string));
-							SendString(replyPortID, responseXML);
-							return;	
-						}
-					}
-									}
-					break;
-				case processSubscription:{
-					if (params->value.as_array.length == 1) {
-						Dart_CObject* subscription = params->value.as_array.values[0];
-						if (subscription->type == Dart_CObject_kString) {
-							String ^response = RequestPointer::rqPtr->ProcessSubscription(gcnew String(subscription->value.as_string));
-							SendString(replyPortID, response);
+							}
+											}
+							break;
+						case beginSession:{
+							if (params->value.as_array.length == 2) {
+								Dart_CObject* fileName = params->value.as_array.values[0];
+								Dart_CObject* fileMode = params->value.as_array.values[1];
+								if (fileName->type == Dart_CObject_kString && fileMode->type == Dart_CObject_kInt32) {
+									QBFileMode qbFM = (QBFileMode) fileMode->value.as_int32;
+									String ^ticket = RequestPointer::rqPtr->BeginSession(gcnew String(fileName->value.as_string), qbFM);
+									SendString(replyPortID, ticket);
+									return;	
+								}
+							}
+										  }
+							break;
+						case endSession:{
+							if (params->value.as_array.length == 1) {
+								Dart_CObject* ticket = params->value.as_array.values[0];
+								if (ticket->type == Dart_CObject_kString) {
+									RequestPointer::rqPtr->EndSession(gcnew String(ticket->value.as_string));
+									SendBool(replyPortID, true);
+									return;	
+								}
+							}
+										}
+							break;
+						case processRequest:{
+							if (params->value.as_array.length == 2) {
+								Dart_CObject* ticket = params->value.as_array.values[0];
+								Dart_CObject* xml = params->value.as_array.values[1];
+								if (ticket->type == Dart_CObject_kString && xml->type == Dart_CObject_kString) {
+									String ^responseXML = RequestPointer::rqPtr->ProcessRequest(gcnew String (ticket->value.as_string), gcnew String(xml->value.as_string));
+									SendString(replyPortID, responseXML);
+									return;	
+								}
+							}
+											}
+							break;
+						case processSubscription:{
+							if (params->value.as_array.length == 1) {
+								Dart_CObject* subscription = params->value.as_array.values[0];
+								if (subscription->type == Dart_CObject_kString) {
+									String ^response = RequestPointer::rqPtr->ProcessSubscription(gcnew String(subscription->value.as_string));
+									SendString(replyPortID, response);
+									return;
+								}
+							}
+												 }
+							break;
+						case getQBLastError:{
+							String ^resp = RequestPointer::rqPtr->GetQBLastError();
+							SendString(replyPortID, resp);
 							return;
-						}
+											}
+							break;
+						case getCurrentCompanyFileName:{
+							if (params->value.as_array.length == 1) {
+								Dart_CObject* ticket = params->value.as_array.values[0];
+								if (ticket->type == Dart_CObject_kString) {
+									String ^response = RequestPointer::rqPtr->GetCurrentCompanyFileName(gcnew String(ticket->value.as_string));
+									SendString(replyPortID, response);
+									return;
+								}
+							}
+													   }
+							break;
 					}
-										 }
-					break;
-				case getQBLastError:{
-					String ^resp = RequestPointer::rqPtr->GetQBLastError();
-					SendString(replyPortID, resp);
+				
+				}
+				catch (COMException ^comErr) {
+					IntPtr messageCharArr = Marshal::StringToHGlobalAnsi(comErr->Message);
+					IntPtr lastErrorMessagePtr = Marshal::StringToHGlobalAnsi(RequestPointer::rqPtr->GetQBLastError());
+					Dart_CObject list;
+					list.type = Dart_CObject_kArray;
+					list.value.as_array.length = 4;
+					
+					Dart_CObject* cobject =  New(Dart_CObject_kArray, 4 * sizeof(Dart_CObject*));  
+					list.value.as_array.values = reinterpret_cast<Dart_CObject**>(cobject + 1);
+					
+
+					Dart_CObject err;
+					err.type = Dart_CObject_kString;
+					err.value.as_string = "error";
+
+					Dart_CObject qbLastError;
+					qbLastError.type = Dart_CObject_kString;
+					qbLastError.value.as_string = static_cast<char*>(lastErrorMessagePtr.ToPointer());
+
+					Dart_CObject errMessage;
+					errMessage.type = Dart_CObject_kString;
+					errMessage.value.as_string = static_cast<char*>(messageCharArr.ToPointer());
+
+					Dart_CObject errCode;
+					errCode.type = Dart_CObject_kInt32;
+					errCode.value.as_int32 = comErr->ErrorCode;
+					
+					list.value.as_array.values[0] = &err;
+					list.value.as_array.values[1] = &qbLastError;
+					list.value.as_array.values[2] = &errMessage;
+					list.value.as_array.values[3] = &errCode;
+
+					SendResponse(replyPortID, list);
+
+					Marshal::FreeHGlobal(messageCharArr);
+					Marshal::FreeHGlobal(lastErrorMessagePtr);
 					return;
-									}
-					break;
-				case getCurrentCompanyFileName:{
-					if (params->value.as_array.length == 1) {
-						Dart_CObject* ticket = params->value.as_array.values[0];
-						if (ticket->type == Dart_CObject_kString) {
-							String ^response = RequestPointer::rqPtr->GetCurrentCompanyFileName(gcnew String(ticket->value.as_string));
-							SendString(replyPortID, response);
-							return;
-						}
-					}
-											   }
-					break;
+
+				}
 			}
 		}
-	}
-	SendBool(replyPortID, false);
+		SendBool(replyPortID, false);
 }
 
 
