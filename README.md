@@ -9,8 +9,8 @@ It essentially wraps the methods in the QBXMLRP2 Interop DLL.
 I suggest for exact usage you consult the QBXMLRP2 documentation as it is the same parameters and responses.
 
 
-Instal
-======
+Install
+=======
 
 Download repository as zip or clone it, move the package folder to somewhere that makes sense.
 
@@ -39,20 +39,30 @@ void main () {
       
       // QBFileModes: doNotCare, multiUser, singleUser
       // Begins a session for the specified file name and mode. Quickbooks *will* prompt for authorization
-      qbc.beginSession(companyFileName, QBFileMode.doNotCare).then((String ticketID) {
-        qbc.getCurrentCompanyFileName(ticketID).then((String fileName) { 
-          print("Connected to company $fileName - Sending XML...");
-          
-          // Sends the XML to quickbooks
-          qbc.processRequest(ticketID, "XML HERE").then((String responseXML) {
-            print("Got response: $responseXML");
-            
-            // Ends the session
-            qbc.endSession(ticketID);
-          });
-        });
-      });
+      return qbc.beginSession(companyFileName, QBFileMode.doNotCare);
     }
+  }).then((String ticketID) {
+    // Lets check what the current company file name is... 
+    return qbc.getCurrentCompanyFileName();
+  }).then((String fileName) { 
+    print("Connected to company $fileName - Sending XML...");
+    
+    // Sends the XML to quickbooks
+    return qbc.processRequest("XML HERE");
+  })
+  .then((String responseXML) {
+    //Everything worked correctly!
+    print("Got response: $responseXML");
+
+    qbc.endSession(ticketID);
+    qbc.closeConnection();
+  })
+  .catchError((QuickbooksException error) { 
+    // Error exception has the following fields:
+    // error.code = int representing the thrown error
+    // error.message = String representation of the error
+    // error.qbLastError = The last error given by quickbooks - usually more detailed and helpful for debugging
+    throw error;
   });
 }
 ```
