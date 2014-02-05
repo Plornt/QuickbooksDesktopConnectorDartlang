@@ -70,7 +70,5 @@ void main () {
 TODO
 ====
  
-- Proper error handling (Currently does not send any data back to dart when an error has occured.)
-- Object oriented session handling (ie not needing a ticket every request)
 - Non-Async methods
 - Documentation
